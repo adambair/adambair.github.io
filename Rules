@@ -17,19 +17,31 @@ compile '/stylesheet/' do
   # don’t filter or layout
 end
 
+compile '/images/' do
+
+end
+
 compile '*' do
-  return if item.binary?
+  unless item.binary? # AB: Weak, but fixes LocalJumpError
+    # Filters
+    case item[:extension]
+      when 'markdown'
+        filter :kramdown
+      when 'haml'
+        filter :haml
+      when 'html'
+        filter :erb
+      else
+        nil
+    end
 
-  case item[:extension]
-    when 'md'
-      filter :kramdown
-    when 'haml'
-      filter :haml
-    else
-      filter :erb
+    # Allow the article or page to choose it's layout
+    layout item[:layout] || 'default'
   end
+end
 
-  layout 'default'
+route '/posts/*' do
+  route_for(item) 
 end
 
 route '/stylesheet/' do

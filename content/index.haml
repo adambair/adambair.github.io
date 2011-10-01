@@ -1,0 +1,10 @@
+--- 
+title: Home
+
+---
+
+- sorted_articles.each do |article|
+  %h3
+    %a{:href => path_for(article)}= article[:title]
+  %span= article[:created_at]
+  = article.compiled_content
