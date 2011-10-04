@@ -2,7 +2,7 @@
   %head
     %meta{ :charset => "utf8" }/
     %meta{ :generator => "nanoc 3.2.2" }/
-    %title= "#{ @item[:title] } - Adam Bair"
+    %title= "#{ @item[:title] ? ( @item[:title].to_s + " - Adam Bair" ) : "Adam Bair"}"
     %link{ :rel => "stylesheet", :type => "text/css", :href => "/style.css", :media => "screen" }
 
   %body
