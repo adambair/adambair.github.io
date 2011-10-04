@@ -8,4 +8,6 @@ title: Home
     %h3
       %a{:href => path_for(article)}= article[:title]
     .metadata
-      %span= article[:created_at]
+      - if article[:tags] && article[:tags].split(",").include?(' photo')
+        %span= "[pic]"
+      %span= format_date(article)
