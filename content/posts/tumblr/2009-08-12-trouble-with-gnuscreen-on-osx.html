@@ -1,0 +1,19 @@
+---
+title: Trouble With Gnuscreen on Osx
+slug: trouble-with-gnuscreen-on-osx
+kind: article
+created_at: 2009-08-12 09:19:32 -0400
+original_url: http://blog.adambair.com/post/161263941/trouble-with-gnuscreen-on-osx
+imported_from: Tumblr
+tags: tumblr, 
+layout: 
+published: true
+
+---
+
+<h1>Trouble with gnuscreen on osx?</h1><div><p>When I loaded up screen on OSX (10.5) it seemed like I was missing some things &#x2014; like having the git status on my prompt, among other things. Apparently screen doesn&#x2019;t read ~/.profile by default.</p>
+<p>I found some inspiration here: <a href="http://code.google.com/p/silassewell/wiki/ScreenOSX">http://code.google.com/p/silassewell/wiki/ScreenOSX</a> and used the setup below to resolve my issue:</p>
+<p><b>~/.profile</b></p>
+<pre class="prettyprint">export SHELL='/bin/bash -rcfile ~/.profile'</pre>
+<p><b>~/.screenrc</b></p>
+<pre class="prettyprint">shell -$SHELL</pre></div>

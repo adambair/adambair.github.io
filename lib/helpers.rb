@@ -6,5 +6,9 @@ def route_for(_item)
 end
 
 def path_for(_item)
-  '/posts/' + Date.parse(_item[:created_at]).to_s.gsub('-', '/') + '/' + _item[:slug] + '/'
+  '/posts/' + date_for(_item).gsub('-', '/') + '/' + _item[:slug].to_s + '/'
+end
+
+def date_for(_item)
+  Date.parse(_item[:created_at]).to_s
 end

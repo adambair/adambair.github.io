@@ -1,0 +1,21 @@
+---
+title: Port Install Offlineimap Error Option No User Cfg
+slug: port-install-offlineimap-error-option-no-user-cfg
+kind: article
+created_at: 2009-08-10 14:39:29 -0400
+original_url: http://blog.adambair.com/post/159953326/port-install-offlineimap-error-option-no-user-cfg
+imported_from: Tumblr
+tags: tumblr, 
+layout: 
+published: true
+
+---
+
+<h1>port install offlineimap error: option --no-user-cfg not recognized</h1><div><p>sudo port install offlineimap<br/>&#x2014;-&#xA0; Building offlineimap<br/>Error: Target org.macports.build returned: shell command &#x201D; cd &#x201C;/opt/local/var/macports/build/_opt_local_var_macports_sources_rsync.macports.org_release_ports_mail_offlineimap/work/offlineimap&#x201D;  /opt/local/bin/python2.5 setup.py &#x2014;no-user-cfg build &#x201D; returned error 1<br/>Command output: usage: setup.py [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] &#x2026;]<br/> or: setup.py &#x2014;help [cmd1 cmd2 &#x2026;]<br/> or: setup.py &#x2014;help-commands<br/> or: setup.py cmd &#x2014;help<br/><br/>error: option &#x2014;no-user-cfg not recognized<br/><br/>Error: Status 1 encountered during processing.</p>
+<p>&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;-</p>
+<p>Unfun. You can fix this by running the installation manually.</p>
+<p>&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;-</p>
+<p>cd &#x201C;/opt/local/var/macports/build/_opt_local_var_macports_sources_rsync.macports.org_release_ports_mail_offlineimap/work/offlineimap&#x201D;</p>
+<p>sudo /opt/local/bin/python2.5 setup.py build</p>
+<p>sudo python2.5 setup.py install</p>
+<p>sudo port clean offlineimap</p></div>

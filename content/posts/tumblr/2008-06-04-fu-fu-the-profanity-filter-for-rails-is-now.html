@@ -1,0 +1,19 @@
+---
+title: Fu Fu the Profanity Filter for Rails Is Now
+slug: fu-fu-the-profanity-filter-for-rails-is-now
+kind: article
+created_at: 2008-06-04 13:04:51 -0400
+original_url: http://blog.adambair.com/post/37167745/fu-fu-the-profanity-filter-for-rails-is-now
+imported_from: Tumblr
+tags: tumblr, 
+layout: 
+published: true
+
+---
+
+<h1>Fu-fu: The Profanity Filter for Rails is now Non-Destructive</h1><div><p>Fu-Fu: The Profanity Filter for Rails will no longer modify the data in your database (unless you want it to).&#xA0; From the README:</p>
+<p>Notice &#x2014; there are two profanity filters, one is destructive.&#xA0; Beware the exclamation point (profanity_filter!).<br/><br/><b>Non-Destructive</b> (filters content when called, original text remains in the database)<br/></p>
+<blockquote>profanity_filter :foo, :bar<br/># banned words will be replaced with @#$%<br/>profanity_filter :foo, :bar, :method =&gt; &#x2018;dictionary&#x2019;<br/># banned words will have their vowels replaced<br/></blockquote>
+<p><br/><b>Destructive</b> (saves the filtered content to the database)<br/></p>
+<blockquote>profanity_filter! :foo, :bar<br/># banned words will be replaced with @#$%<br/>profanity_filter! :foo, :bar, :method =&gt; &#x2018;dictionary&#x2019;<br/># banned words will have their vowels replace</blockquote>
+<p>As usual, you can find Fu-fu here:&#xA0; <a href="http://github.com/adambair/fu-fu/tree/master">http://github.com/adambair/fu-fu/tree/master</a></p></div>

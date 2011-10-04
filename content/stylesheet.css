@@ -40,6 +40,14 @@ a:hover {
   letter-spacing: -1px;
 }
 
+#main article h3 {
+  display: inline;
+}
+
+#main article .metadata {
+  float: right;
+}
+
 #main p {
   margin: 20px 0;
   

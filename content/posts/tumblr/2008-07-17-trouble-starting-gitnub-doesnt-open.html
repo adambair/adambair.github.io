@@ -1,0 +1,18 @@
+---
+title: Trouble Starting Gitnub Doesnt Open
+slug: trouble-starting-gitnub-doesnt-open
+kind: article
+created_at: 2008-07-17 18:07:07 -0400
+original_url: http://blog.adambair.com/post/42634494/trouble-starting-gitnub-doesnt-open
+imported_from: Tumblr
+tags: tumblr, 
+layout: 
+published: true
+
+---
+
+<h1>Trouble Starting Gitnub? (doesn't open)</h1><div><p>You can open console.app and check the logs &#x2014; in my case it said:</p>
+<p><b> no such file to load &#x2014; open4 (LoadError)</b></p>
+<p>Upon checking my installed gems &#x2014; open4 (0.9.6) was installed.&#xA0; Hrm.&#xA0; Checked around and apparently GitNub attempts to use the default OS X ruby install.&#xA0; Odd considering most rubyists I know usually gut the default Ruby install and just use MacPorts.&#xA0; Anyway &#x2014; Found that you can run the following to aleviate the issue:</p>
+<p><b> `sudo /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/gem install open4`</b></p>
+<p>Default OS X Ruby will now have the open4 gem and GitNub will be happy.</p></div>

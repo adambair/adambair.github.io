@@ -1,0 +1,17 @@
+---
+title: Cucumber Webrat and Uninitialized Constant
+slug: cucumber-webrat-and-uninitialized-constant
+kind: article
+created_at: 2009-03-24 21:59:50 -0400
+original_url: http://blog.adambair.com/post/89557713/cucumber-webrat-and-uninitialized-constant
+imported_from: Tumblr
+tags: tumblr, 
+layout: 
+published: true
+
+---
+
+<h1>Cucumber, Webrat, and uninitialized constant ActionController::AbstractRequest (NameError)</h1><div><p>If you&#x2019;re using Cucumber and Webrat and you run into this error: uninitialized constant ActionController::AbstractRequest (NameError) it&#x2019;s likely that your version of webrat or nokogiri is out of date.</p>
+<p>I had this problem running webrat 0.4.0 and nokogiri 1.1.1. I ran &#x2018;sudo gem update webrat&#x2019; and it updated to 0.4.3 and it also updated it&#x2019;s nokogiri dependency to 1.2.3. Updating my gems fixed the issue.</p>
+<p>This is after searching google for 45 mins and coming up empty handed.</p>
+<p>Lesson: Keep your gems up to date to avoid obscure failures.</p></div>

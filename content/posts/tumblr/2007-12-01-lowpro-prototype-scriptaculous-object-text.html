@@ -1,0 +1,26 @@
+---
+title: Lowpro Prototype Scriptaculous Object Text
+slug: lowpro-prototype-scriptaculous-object-text
+kind: article
+created_at: 2007-12-01 21:04:00 -0500
+original_url: http://blog.adambair.com/post/20639949/lowpro-prototype-scriptaculous-object-text
+imported_from: Tumblr
+tags: tumblr, 
+layout: 
+published: true
+
+---
+
+<h1>Lowpro, Prototype, Scriptaculous [object text]</h1><div>
+  <p>When using these three javascript libraries together you may run into a problem where you try to update an element and instead of having your content show up you get [object text] instead.  </p>
+  <p>You can fix it by commenting the following out of your lowpro.js file: </p>
+  <p>
+    <code>String.prototype.toElement = function() {</code>
+    <br/>
+    <code>&#xA0; return DOM.Builder.fromHTML(this);</code>
+    <br/>
+    <code>};</code>
+  </p>
+  <p>I encountred this in lowpro 0.4.1 &#x2014; it may be fixed in later versions.</p>
+  <p>[UPDATE] - this is fixed in trunk. </p>
+</div>
